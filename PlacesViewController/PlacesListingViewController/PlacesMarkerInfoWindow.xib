@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+        <array key="SourceSansPro-SemiBold.ttf">
+            <string>SourceSansPro-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacesMarkerInfoWindow" customModule="App411" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView_EventImage" destination="JU3-J8-iQm" id="W6I-yf-ihe"/>
+                <outlet property="label_EventName" destination="WVU-jW-Sue" id="Dzg-BG-EyU"/>
+                <outlet property="label_EventTime" destination="1gJ-1C-hid" id="OmC-KV-OR2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tvN-wZ-0im">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MarkerInforWindowIcon" translatesAutoresizingMaskIntoConstraints="NO" id="1oG-QX-R1v" customClass="DesignableImageView" customModule="App411" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="60" width="250" height="180"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4a-BW-qih" customClass="DesignableView" customModule="App411" customModuleProvider="target">
+                    <rect key="frame" x="65" y="0.0" width="120" height="120"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JU3-J8-iQm" customClass="DesignableImageView" customModule="App411" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="104" height="104"/>
+                            <color key="backgroundColor" red="0.86522069830000004" green="0.86522069830000004" blue="0.86522069830000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="52"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="JU3-J8-iQm" secondAttribute="bottom" constant="8" id="6Ot-eU-XLx"/>
+                        <constraint firstAttribute="trailing" secondItem="JU3-J8-iQm" secondAttribute="trailing" constant="8" id="6sz-cf-Bhe"/>
+                        <constraint firstAttribute="width" constant="120" id="YUd-GL-TUS"/>
+                        <constraint firstItem="JU3-J8-iQm" firstAttribute="leading" secondItem="Q4a-BW-qih" secondAttribute="leading" constant="8" id="g26-lm-ZeN"/>
+                        <constraint firstItem="JU3-J8-iQm" firstAttribute="top" secondItem="Q4a-BW-qih" secondAttribute="top" constant="8" id="hsa-Ae-OMG"/>
+                        <constraint firstAttribute="height" constant="120" id="jnu-wr-a0C"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="60"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.90000000000000002"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVU-jW-Sue">
+                    <rect key="frame" x="10" y="125" width="230" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="yGB-wg-7i4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="16"/>
+                    <color key="textColor" red="0.89351838829999997" green="0.25775435569999999" blue="0.20929640529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gJ-1C-hid">
+                    <rect key="frame" x="10" y="155" width="230" height="70"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="13"/>
+                    <color key="textColor" red="0.30915181800000002" green="0.30915181800000002" blue="0.30915181800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="1oG-QX-R1v" firstAttribute="leading" secondItem="tvN-wZ-0im" secondAttribute="leading" id="5Tc-3x-ddS"/>
+                <constraint firstItem="WVU-jW-Sue" firstAttribute="leading" secondItem="tvN-wZ-0im" secondAttribute="leading" constant="10" id="FUb-3V-aSg"/>
+                <constraint firstAttribute="bottom" secondItem="1oG-QX-R1v" secondAttribute="bottom" id="HZM-eB-bsH"/>
+                <constraint firstAttribute="bottom" secondItem="1gJ-1C-hid" secondAttribute="bottom" constant="15" id="Lq7-zv-qGn"/>
+                <constraint firstItem="1gJ-1C-hid" firstAttribute="top" secondItem="WVU-jW-Sue" secondAttribute="bottom" constant="5" id="NYm-0e-OMF"/>
+                <constraint firstItem="WVU-jW-Sue" firstAttribute="top" secondItem="Q4a-BW-qih" secondAttribute="bottom" constant="5" id="SXH-Pf-h89"/>
+                <constraint firstItem="1gJ-1C-hid" firstAttribute="leading" secondItem="WVU-jW-Sue" secondAttribute="leading" id="TkV-Z6-kkA"/>
+                <constraint firstAttribute="trailing" secondItem="1oG-QX-R1v" secondAttribute="trailing" id="U2E-aQ-gks"/>
+                <constraint firstAttribute="trailing" secondItem="WVU-jW-Sue" secondAttribute="trailing" constant="10" id="WmT-py-1bE"/>
+                <constraint firstItem="1gJ-1C-hid" firstAttribute="trailing" secondItem="WVU-jW-Sue" secondAttribute="trailing" id="cxh-n0-u1q"/>
+                <constraint firstItem="Q4a-BW-qih" firstAttribute="centerX" secondItem="tvN-wZ-0im" secondAttribute="centerX" id="jDt-7A-g38"/>
+                <constraint firstItem="Q4a-BW-qih" firstAttribute="top" secondItem="tvN-wZ-0im" secondAttribute="top" id="jJh-7q-bGC"/>
+                <constraint firstItem="1oG-QX-R1v" firstAttribute="top" secondItem="Q4a-BW-qih" secondAttribute="bottom" constant="-60" id="kyT-Wv-MTQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="9eW-RB-lvw"/>
+            <point key="canvasLocation" x="-3" y="31"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MarkerInforWindowIcon" width="101" height="86"/>
+    </resources>
+</document>
